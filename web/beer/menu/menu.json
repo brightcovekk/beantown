@@ -1,0 +1,154 @@
+{
+    "updated": "Mon Nov 14 08:29:48 EST 2011",
+    "types": [
+        {
+            "title": "生ビール",
+            "id": "light",
+            "image": "http://beer.brightcove.com/menu/index-light.jpg"
+        },
+        {
+            "title": "黒ビール",
+            "id": "dark",
+            "image": "http://beer.brightcove.com/menu/index-dark.jpg"
+        },
+        {
+            "title": "季節限定",
+            "id": "seasonal",
+            "image": "http://beer.brightcove.com/menu/index-seasonal.jpg"
+        },
+        {
+            "title": "スペシャル",
+            "id": "special",
+            "image": "http://beer.brightcove.com/menu/index-special.jpg"
+        }
+    ],
+    "items": [
+        {
+            "id": "console-dot-lager",
+            "title": "ラガー",
+            "types": ["light"],
+            "description": "一番人気のビールです",
+            "image": "http://beer.brightcove.com/menu/console-dot-lager.jpg"
+        },
+        {
+            "id": "htm-ale",
+            "title": "アール",
+            "types": ["light"],
+            "description": "飲みやすいビールです",
+            "image": "http://beer.brightcove.com/menu/htm-ale.jpg"
+        },
+        {
+            "id": "app-cloud-amber",
+            "title": "アンバー",
+            "types": ["light"],
+            "description": "新感覚のビールです",
+            "image": "http://beer.brightcove.com/menu/app-cloud-amber.jpg"
+        },
+        {
+            "id": "blogger-lager",
+            "title": "ブライトコーブ　ラガー",
+            "types": ["light"],
+            "description": "店舗限定メニューです",
+            "image": "http://beer.brightcove.com/menu/blogger-lager.jpg"
+        },
+        {
+            "id": "fail-whale-ale",
+            "title": "コード　アール",
+            "types": ["light"],
+            "description": "ノンアルコールビールです*",
+            "image": "http://beer.brightcove.com/menu/fail-whale-ale.jpg",
+            "note": "* Limited Availability"
+        },
+        {
+            "id": "porter-square-porter",
+            "title": "ポータースクエア",
+            "types": ["dark"],
+            "description": "当店ナンバー２人気のビールです",
+            "image": "http://beer.brightcove.com/menu/porter-square-porter.jpg"
+        },
+        {
+            "id": "standard-out-stout",
+            "title": "スタンダード　スタウト",
+            "types": ["dark"],
+            "description": "店長お勧めのドリンクです",
+            "image": "http://beer.brightcove.com/menu/standard-out-stout.jpg"
+        },
+        {
+            "id": "brogrammer-brew",
+            "title": "コード　ブルー",
+            "types": ["dark"],
+            "description": "アメリカ限定品のビールを取り寄せました",
+            "image": "http://beer.brightcove.com/menu/brogrammer-brew.jpg"
+        },
+        {
+            "id": "foo-bar",
+            "title": "ブラック　ブルー",
+            "types": ["dark"],
+            "description": "飲みやすい黒ビールです！",
+            "image": "http://beer.brightcove.com/menu/foo-bar.jpg"
+        },
+        {
+            "id": "callback-black",
+            "title": "コールバック　ブラック",
+            "types": ["dark"],
+            "description": "初めての方におすすめのビールです",
+            "image": "http://beer.brightcove.com/menu/callback-black.jpg"
+        },
+        {
+            "id": "ruby-red",
+            "title": "ルビーレッド",
+            "types": ["seasonal"],
+            "description": "赤いビールです！",
+            "image": "http://beer.brightcove.com/menu/ruby-red.jpg"
+        },
+        {
+            "id": "network-hops",
+            "title": "ネットワーク　ホップ",
+            "types": ["seasonal"],
+            "description": "やみつきになるドリンクです！",
+            "image": "http://beer.brightcove.com/menu/network-hops.jpg"
+        },
+        {
+            "id": "tap-event",
+            "title": "タップ　イベント",
+            "types": ["seasonal"],
+            "description": "季節限定品です！",
+            "image": "http://beer.brightcove.com/menu/tap-event.jpg"
+        },
+        {
+            "id": "tech-bubbles",
+            "title": "テック　バブル",
+            "types": ["seasonal"],
+            "description": "最高の泡立ちのビールです！",
+            "image": "http://beer.brightcove.com/menu/tech-bubbles.jpg"
+        },
+        {
+            "id": "harvard-yard",
+            "title": "ハーバード　ヤード",
+            "types": ["special"],
+            "description": "ハーバードの学生が考案したドリンクです！",
+            "image": "http://beer.brightcove.com/menu/harvard-yard.jpg"
+        },
+        {
+            "id": "test-flight",
+            "title": "フライト　ブルー",
+            "types": ["special"],
+            "description": "味は保証します！",
+            "image": "http://beer.brightcove.com/menu/test-flight.jpg"
+        },
+        {
+            "id": "navigation-bar",
+            "title": "シーズン　バッド",
+            "types": ["special"],
+            "description": "季節限定品です！",
+            "image": "http://beer.brightcove.com/menu/navigation-bar.jpg"
+        },
+        {
+            "id": "dom-perignon",
+            "title": "ぺリグノン",
+            "types": ["special"],
+            "description": "ブドウを使用したビールです!",
+            "image": "http://beer.brightcove.com/menu/dom-perignon.jpg"
+        }
+    ]
+}

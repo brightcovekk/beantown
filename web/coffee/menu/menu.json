@@ -1,0 +1,154 @@
+{
+    "updated": "Fri Oct 21 10:12:48 EDT 2011",
+    "types": [
+        {
+            "title": "コーヒー",
+            "id": "coffee",
+            "image": "http://coffee.brightcove.com/menu/index-coffees.jpg"
+        },
+        {
+            "title": "紅茶",
+            "id": "tea",
+            "image": "http://coffee.brightcove.com/menu/index-teas.jpg"
+        },
+        {
+            "title": "おつまみ",
+            "id": "snack",
+            "image": "http://coffee.brightcove.com/menu/index-snacks.jpg"
+        },
+        {
+            "title": "期間限定",
+            "id": "special",
+            "image": "http://coffee.brightcove.com/menu/index-specials.jpg"
+        }
+    ],
+    "items": [
+        {
+            "id": "boston-blend",
+            "title": "ボストンブレンド",
+            "types": ["coffee"],
+            "description": " 5種類のコーヒー豆をブレンドした、コク深く、香り高いコーヒー",
+            "image": "http://coffee.brightcove.com/menu/boston-blend.jpg"
+        },
+        {
+            "id": "brightcove-blend",
+            "title": "ブライトコーブブレンド",
+            "types": ["coffee"],
+            "description": "高品質な豆を使用した贅沢な味わい",
+            "image": "http://coffee.brightcove.com/menu/brightcove-blend.jpg"
+        },
+        {
+            "id": "developer-dark-roast",
+            "title": "カフェラテ",
+            "types": ["coffee"],
+            "description": "ナンバー１人気のカフェラテ",
+            "image": "http://coffee.brightcove.com/menu/developer-dark-roast.jpg"
+        },
+        {
+            "id": "cafe-cambridge",
+            "title": "キャラメルマキアート",
+            "types": ["coffee"],
+            "description": "コーヒーが苦手な人もぜひ",
+            "image": "http://coffee.brightcove.com/menu/cafe-cambridge.jpg"
+        },
+        {
+            "id": "code-freeze",
+            "title": "アイスコーヒー",
+            "types": ["coffee"],
+            "description": "アイスクリームのトッピングも追加できます",
+            "image": "http://coffee.brightcove.com/menu/code-freeze.jpg"
+        },
+        {
+            "id": "url-grey",
+            "title": "アールグレー",
+            "types": ["tea"],
+            "description": "香ばしい柑橘系の香り",
+            "image": "http://coffee.brightcove.com/menu/url-grey.jpg"
+        },
+        {
+            "id": "develop-mint",
+            "title": "ミント",
+            "types": ["tea"],
+            "description": "新感覚な味です　絶妙なハーモニー",
+            "image": "http://coffee.brightcove.com/menu/develop-mint.jpg"
+        },
+        {
+            "id": "w-tea-f",
+            "title": "ヘルシー　ティー",
+            "types": ["tea"],
+            "description": "脂肪を燃焼してくれる効果がある最近話題の紅茶です",
+            "image": "http://coffee.brightcove.com/menu/w-tea-f.jpg"
+        },
+        {
+            "id": "m-i-tea",
+            "title": "ウーロン茶",
+            "types": ["tea"],
+            "description": "オリジナルウーロン茶　ぜひこの機会にどうぞ",
+            "image": "http://coffee.brightcove.com/menu/m-i-tea.jpg"
+        },
+        {
+            "id": "green-t",
+            "title": "緑茶",
+            "types": ["tea"],
+            "description": "静岡から特別取り寄せた茶葉を使用しております",
+            "image": "http://coffee.brightcove.com/menu/green-t.jpg"
+        },
+        {
+            "id": "code-drops",
+            "title": "チョコレート飴",
+            "types": ["snack"],
+            "description": "オリジナルな製造方法で作られたチョコレート飴をどうぞ",
+            "image": "http://coffee.brightcove.com/menu/code-drops.jpg"
+        },
+        {
+            "id": "mega-bites",
+            "title": "クッキー",
+            "types": ["snack"],
+            "description": "みんなが大好きなチョコレートチップクッキー",
+            "image": "http://coffee.brightcove.com/menu/mega-bites.jpg"
+        },
+        {
+            "id": "giga-bites",
+            "title": "ビスケット",
+            "types": ["snack"],
+            "description": "新メニュー登場です！アールグレイに合います！",
+            "image": "http://coffee.brightcove.com/menu/giga-bites.jpg"
+        },
+        {
+            "id": "tera-bites",
+            "title": "ブラウニー",
+            "types": ["snack"],
+            "description": "チョコレートがぎっしり詰まったブラウニーです",
+            "image": "http://coffee.brightcove.com/menu/tera-bites.jpg"
+        },
+        {
+            "id": "kendall-squares",
+            "title": "桜ブラウニー",
+            "types": ["special"],
+            "description": "レギュラーメニューのブラウニーを桜風味にしてみました",
+            "image": "http://coffee.brightcove.com/menu/kendall-squares.jpg"
+        },
+        {
+            "id": "content-feed",
+            "title": "ナッツ",
+            "types": ["special"],
+            "description": "香ばしいナッツです",
+            "image": "http://coffee.brightcove.com/menu/content-feed.jpg"
+        },
+        {
+            "id": "browser-cookies",
+            "title": "ホワイトチョコレートチップクッキー",
+            "types": ["special"],
+            "description": "ホワイトチョコレートとマカデミアナッツのクッキーです！",
+            "image": "http://coffee.brightcove.com/menu/browser-cookies.jpg"
+        },
+        {
+            "id": "code-slush",
+            "title": "キャラメルプリン",
+            "types": ["special"],
+            "description": "去年一番人気だったプリンが復活します！*",
+            "note": "* 4/12日発売となります。",
+            "image": "http://coffee.brightcove.com/menu/code-slush.jpg"
+        }
+    ]
+}
