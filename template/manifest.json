@@ -1,0 +1,193 @@
+{
+    "name": "ビーンタウンコーヒー テンプレート",
+    "description": "Brightcove App Cloud リファレンスアプリケーション日本語版",
+    "version": "1.0",
+    "devices": [ "iPhone", "Android", "iPad", "Android Tablet" ],
+    "platformConfig": {
+        "android": {
+            "nativeNavigation": "true"
+        },
+        "iOS": {
+            "nativeNavigation": "true"
+        }
+    },
+    "global": {
+        "settings": [],
+        "styles": [],
+        "data": []
+    },
+    "views": [
+        {
+            "navigationTitle": "ニュース",
+            "navigationIcon": "img/nav-news.png",
+            "uri": "html/news.html",
+            "settings": [
+                {
+                    "name": "blog-title",
+                    "type": "string",
+                    "value": "ブログ"
+                },
+                {
+                    "name": "tweets-title",
+                    "type": "string",
+                    "value": "#コーヒー"
+                },
+                {
+                    "name": "twitter-query",
+                    "type": "string",
+                    "value": "%EF%BC%83%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC"
+                }
+            ],
+            "styles": [
+                {
+                    "name": "accent",
+                    "type": "color",
+                    "attribute": "background-color",
+                    "value": "#99CC33"
+                }
+            ],
+            "data": [
+                {
+                    "name": "blog",
+                    "contentFeed": "4f8bbf67ec8e6025cd0240a1",
+                    "type": "feed",
+                    "configs": {
+                        "articles": {
+                            "type": "array",
+                            "items": {
+                                "title":           { "type": "string" },
+                                "guid":            { "type": "string" },
+                                "content_encoded": { "type": "string" },
+                                "enclosure_url":   { "type": "image" },
+                                "link":            { "type": "url" },
+                                "pubDate":         { "type": "date" }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "navigationTitle": "クーポン",
+            "navigationIcon": "img/nav-coupons.png",
+            "uri": "html/coupons.html",
+            "settings": [
+                {
+                    "name": "coupon-message",
+                    "type": "string",
+                    "value": "クーポンは、http://coffee.ac-app.brightcove.jp/にて案内しております。"
+                }
+            ],
+            "styles": [],
+            "data": [
+                {
+                    "name": "coupons",
+                    "contentFeed": "4f8bc0e1499a026f70030c5d",
+                    "type": "feed"
+                }
+            ]
+        },
+        {
+            "navigationTitle": "地図",
+            "navigationIcon": "img/nav-locate.png",
+            "uri": "html/location.html",
+            "settings": [
+                {
+                    "name": "place-types",
+                    "type": "string",
+                    "value": "cafe"
+                },
+                {
+                    "name": "place-radius",
+                    "type": "string",
+                    "value": "3000"
+                },
+                {
+                    "name": "place-api-key",
+                    "type": "string",
+                    "value": "AIzaSyDkkk1yDfh0CUlScbSlJ0zw-uvHZ3SH_Wc"
+                }
+            ]
+        },
+        {
+            "navigationTitle": "メニュー",
+            "navigationIcon": "img/nav-menu.png",
+            "uri": "html/menu.html",
+            "settings": [],
+            "styles": [],
+            "data": [
+                {
+                    "name": "menu",
+                    "contentFeed": "4f8bc102499a026f6803209e",
+                    "type": "feed"
+                }
+            ]
+        },
+        {
+            "navigationTitle": "ギャラリー",
+            "navigationIcon": "img/nav-gallery.png",
+            "uri": "html/gallery.html",
+            "settings": [],
+            "styles": [],
+            "data": [
+                {
+                    "name": "gallery",
+                    "contentFeed": "4f8bc11f499a026f680320b7",
+                    "type": "feed"
+                }
+            ]
+        },
+        {
+            "navigationTitle": "ビデオ",
+            "navigationIcon": "img/nav-learn.png",
+            "uri": "html/learn.html",
+            "settings": [
+                {
+                    "name": "brightcove-title",
+                    "type": "string",
+                    "value": "Brightcove"
+                },
+                {
+                    "name": "youtube-title",
+                    "type": "string",
+                    "value": "YouTube"
+                },
+                {
+                    "name": "brightcove-player-id",
+                    "type": "string",
+                    "value": "63261956001"
+                },
+                {
+                    "name": "brightcove-player-key",
+                    "type": "string",
+                    "value": "AQ~~,AAAAAH9G8mE~,iZRhqbqZjnwg-JWC-cV2zhp4wsEqLpJW"
+                },
+                {
+                    "name": "youtube-playlist-id",
+                    "type": "string",
+                    "value": "02ACC75C731FA9EA"
+                }
+            ],
+            "styles": [
+                {
+                    "name": "accent",
+                    "type": "color",
+                    "attribute": "background-color",
+                    "value": "#99CC33"
+                }
+            ],
+            "data": [
+                {
+                    "name": "brightcove-videos",
+                    "contentConnector": "4f8bc53e499a026f640330b3",
+                    "type": "video_cloud"
+                },
+                {
+                    "name": "youtube-videos",
+                    "contentFeed": "4f8bca90987d0344360237fd",
+                    "type": "feed"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+===== blog-results
+{{device|equals>tablet|choose>125>75|set>width}}
+
+<ul id="blog-results" class="results">
+    {{results}}
+        <li data-result-type="blog-entry" data-result-id="{{guid}}">
+            <div class="thumbnail">
+                {{if enclosure_url}}
+                    <img src="{{enclosure_url|transcode>`width`}}" width="{{width}}" class="framed"/>
+                {{else}}
+                    <img src="../img/default.png" class="framed" width="{{width}}"/>
+                {{/if}}
+            </div>
+            <div class="content">
+                <h2>{{title}}</h2>
+
+                <p>{{content_encoded|clean|tease>25}}</p>
+
+                <p><small>{{pubDate|datetime>n/j/Y g:i a}}</small></p>
+            </div>
+        </li>
+    {{/results}}
+</ul>
+
+===== tweet-results
+<ul id="twitter-results" class="results">
+    {{results}}
+        <li data-result-type="tweet" data-result-id="{{id_str}}">
+            <div class="thumbnail">
+                <img src="{{profile_image_url}}" width="50" height="50" class="framed"/>
+            </div>
+            <div class="content">
+                <h2>{{from_user}}</h2>
+
+                <p>{{text}}</p>
+
+                <p><small><img src="../img/tweet.png" width="20" height="15"/> {{created_at|timeago}}</small></p>
+            </div>
+        </li>
+    {{/results}}
+</ul>
+
+===== blog-detail
+{{device|equals>tablet|choose>350>250|set>width}}
+
+<article>
+    <h1>{{title}}</h1>
+    <div class="dateline">
+        {{pubDate|datetime}}
+    </div>
+    <div class="article-copy">
+        {{if enclosure_url}}
+            <div class="article-image">
+                <img src="{{enclosure_url|transcode>`width`}}" width="{{width}}" class="framed"/>
+            </div>
+        {{/if}}
+
+        {{content_encoded|grafs}}
+    </div>
+</article>
+
+===== tweet-detail
+<article>
+    <div style="float:left; margin:0 10px 10px 0">
+        <img src="{{profile_image_url}}" width="50" height="50" class="framed"/>
+    </div>
+    <h1>{{from_user}}</h1>
+    <a href="http://twitter.com/#!/{{from_user}}">@{{from_user}}</a>
+    <p style="clear:both">
+        {{text|linkify|twittify}}
+    </p>
+    <div class="dateline">
+        <img src="../img/tweet.png" width="20" height="15"/>
+        {{created_at|timeago}}
+    </div>
+</article>

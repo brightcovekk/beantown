@@ -1,0 +1,70 @@
+===== location-results
+{{if results}}
+    <ul class="results">
+        {{results}}
+            <li data-result-id="{{reference}}">
+                <div class="thumbnail">
+                    {{if device|equals>phone}}
+                        <img src="../img/marker.png" class="framed" width="60" height="60" alt=""/>
+                    {{else}}
+                        <img src="http://maps.google.com/maps/api/staticmap?sensor=true&zoom=14&size=175x175&markers=color:red%7C{{geometry.location.lat}},{{geometry.location.lng}}&scale={{pxratio}}" class="framed" width="175" height="175"/>
+                    {{/if}}
+                </div>
+                <div class="content">
+                    <h2>{{name}}</h2>
+                    <p>{{vicinity}}</p>
+                </div>
+            </li>
+        {{/results}}
+    </ul>
+{{else}}
+    <article>
+        <p>該当する候補がありません。 Click "Edit" to search another area.</p>
+    </article>
+{{/if}}
+
+
+===== location-detail
+{{device|equals>tablet|choose>500>250|set>width}}
+{{device|equals>tablet|choose>350>175|set>height}}
+
+<article>
+    <h1>{{name}}</h1>
+
+    <p>{{vicinity}}</p>
+
+    <div id="detail-btns">
+        <div class="btn">
+            <a href="http://maps.google.com/maps?daddr={{vicinity|url}}&saddr=Current+Location">ここまでの道筋を調べる</a>
+        </div>
+    </div>
+
+    <div style="margin:15px 0">
+        <img src="http://maps.google.com/maps/api/staticmap?sensor=true&zoom=14&size={{width}}x{{height}}&markers=color:red%7C{{geometry.location.lat}},{{geometry.location.lng}}&scale={{pxratio}}" class="framed" width="{{width}}" height="{{height}}"/>
+    </div>
+</article>
+
+===== location-detail-call
+{{if formatted_phone_number}}
+    <div class="btn">
+        <a href="tel:{{formatted_phone_number|tel}}">{{formatted_phone_number}}に電話する</a>
+    </div>
+{{/if}}
+
+===== location-form
+<article>
+
+<p>地名、住所、もしくは郵便番号を入力してください:</p>
+
+<input type="text" class="search" id="query" name="query" value="{{query|blank>恵比寿}}"/>
+
+<div class="btn" id="search">Go</div>
+
+<br>
+<br>
+
+<p>もしくは現在地で調べる:</p>
+
+<div class="btn" id="auto">現在地を取得する</div>
+
+</article>

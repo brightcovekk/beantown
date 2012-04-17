@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>News</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="bc-manifest" content="../manifest.json" />
+
+<!-- styles -->
+<link rel="stylesheet" type="text/css" href="../css/theme-1.8.css" />
+<link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+<!-- scripts -->
+<script src="../js/lib/brightcove-app-cloud-1.8.js"></script>
+<script src="../js/lib/markup.js"></script>
+<script src="../js/lib/scrollworks.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/view/View.js"></script>
+<script src="../js/view/NewsView.js"></script>
+
+<script>
+var view;
+
+$(bc).bind("viewfocus", function (evt) {
+    if (!view) {
+        view = new NewsView();
+        view.init();
+    }
+});
+</script>
+
+</head>
+
+<body>
+
+<header id="banner">
+    ...
+</header>
+
+<div class="deck" id="outer-deck" data-manual="back">
+    <div class="card" id="results-card">
+        <ul id="toggle" class="toggle">
+            <li data-value="blog">...</li>
+            <li data-value="tweets">...</li>
+        </ul>
+
+        <div class="deck" id="inner-deck">
+            <div class="card list" id="results-blog-card">
+                <div class="scrollbox" id="results-blog-scrollbox">
+                    <!-- template -->
+                </div>
+            </div>
+            
+            <div class="card list" id="results-tweets-card">
+                <div class="scrollbox" id="results-tweets-scrollbox">
+                    <!-- template -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card detail" id="detail-card">
+        <div id="share" class="share">
+            <!-- dynamic -->
+        </div>
+
+        <div class="scrollbox" id="article-scrollbox">
+            <!-- template -->
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

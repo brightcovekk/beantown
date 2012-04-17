@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Learn</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="bc-manifest" content="../manifest.json" />
+
+<!-- styles -->
+<link rel="stylesheet" type="text/css" href="../css/theme-1.8.css" />
+<link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+<!-- scripts -->
+<script src="../js/lib/brightcove-app-cloud-1.8.js"></script>
+<script src="../js/lib/markup.js"></script>
+<script src="../js/lib/scrollworks.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/view/View.js"></script>
+<script src="../js/view/LearnView.js"></script>
+<script src="http://admin.brightcove.co.jp/js/BrightcoveExperiences.js"></script>
+
+<script>
+var view;
+
+$(bc).bind("viewfocus", function (evt) {
+    if (!view) {
+        view = new LearnView();
+        view.init();
+    }
+});
+</script>
+
+</head>
+
+<body>
+
+<div id="overlay" class="overlay">
+    <!-- video here -->
+</div>
+
+<header id="banner">
+    ...
+</header>
+
+<ul id="toggle" class="toggle">
+    <li data-value="brightcove">...</li>
+    <li data-value="youtube">...</li>
+</ul>
+
+<div class="deck" id="deck">
+    <div class="card list" id="results-brightcove-card">
+        <div class="scrollbox" id="results-brightcove-scrollbox">
+            <!-- template -->
+        </div>
+    </div>
+    
+    <div class="card list" id="results-youtube-card">
+        <div class="scrollbox" id="results-youtube-scrollbox">
+            <!-- template -->
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

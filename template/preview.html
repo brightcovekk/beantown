@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Preview</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    background-color: #F5F5F5;
+    margin: 0;
+}
+
+header {
+    display: block;
+    width: 100%;
+    color: #333;
+    font-weight: bold;
+    position: fixed;
+}
+
+header span {
+    display: inline-block;
+    padding: 5px;
+    background-color: #DEDEDE;
+}
+
+.panel {
+    margin: 5px;
+}
+
+.panel-title {
+    font-weight: bold;
+}
+
+a, a:visited {
+    color: blue;
+}
+
+iframe {
+    border: 1px solid #333;
+    background-color: white;
+    margin: 5px 15px 0 0;
+}
+
+#frames { 
+    padding: 30px 10px 10px 10px;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: top;
+}
+</style>
+
+<script src="js/lib/brightcove-app-cloud-1.7.4.js"></script>
+<script src="js/lib/markup.js"></script>
+
+<script>
+$(document).ready(function () {
+    $.getJSON(getManifestURL(), function (json) {
+        $("#frames").html(getPanelsHTML(json));
+        $("#app-title").html(json.name);
+    });
+
+    $("#manifest-url").html(getManifestURL());
+});
+
+var refresh = function (idx) {
+    var frame = document.getElementById('frame-' + idx);
+    frame.contentDocument.location.reload(true);
+}
+
+var refreshAll = function () {
+    for (var i = 0, j = $("iframe").length; i < j; i++) {
+        refresh(i);
+    }
+}
+
+var getQRCode = function () {
+    if (location.href.match('localhost|127.0.0.1|file:')) {
+        return alert("Oops! Cannot scan from \"localhost\" or \"file.\" Please load this page from a network address.");
+    }
+
+    return "http://qrcode.kaywa.com/img.php?s=8&d=" + getManifestURL();
+}
+
+var getManifestURL = function () {
+    return location.href.replace(/\w+\.html.*/, "manifest.json");
+}
+
+var getPanelsHTML = function (json) {
+    var html = "";
+
+    $.each(json.views, function (idx, view) {
+        html += getPanelHTML(idx, view.uri, view.navigationTitle);
+    });
+
+    return html;
+}
+
+var getPanelHTML = function (idx, src, title) {
+    var template =
+        '<div class="panel">' +
+            '<span class="panel-title">{{title}}</span> ' +
+            '<a href="#" onclick="refresh({{idx}})">Refresh</a><br>' +
+            '<iframe id="frame-{{idx}}" width="321" height="484" src="{{src}}"></iframe>' +
+        '</div>';
+
+    var context = {
+        "idx": idx,
+        "src": src,
+        "title": title
+    };
+
+    return Mark.up(template, context);
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <span id="app-title">...</span>
+    <span id="manifest-url">...</span>
+    <span><a href="javascript:void(getQRCode())">Scan QR Code</a></span>
+    <span><a href="javascript:void(refreshAll())">Refresh All</a></span>
+</header>
+
+<div id="frames">
+    ...
+</div>
+
+</body>
+
+</html>

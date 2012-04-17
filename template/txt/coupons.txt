@@ -1,0 +1,36 @@
+===== coupon-results
+{{device|equals>tablet|choose>90>60|set>width}}
+
+<ul class="results">
+    {{results}}
+        <li data-result-id="{{id}}">
+            <div class="thumbnail">
+                <img src="../img/qr-code.png" class="framed" width="{{width}}" height="{{width}}" alt=""/>
+            </div>
+            <div class="content">
+                <h2>{{title}}</h2>
+
+                <p>{{description}}</p>
+
+                <p><small>#{{id}}</small></p>
+            </div>
+        </li>
+    {{/results}}
+</ul>
+
+===== coupon-detail
+<div style="padding:15px; text-align: center">
+    <div class="coupon" id="coupon">
+        <h1>{{title}}</h1>
+
+        <p>{{description}}</p>
+
+        <p><strong>クーポン #{{id}}</strong></p>
+
+        <img src="../img/upc.png" width="200" height="40"/>
+
+        <p><small><strong>有効期限： {{expires|blank>Never}}</strong></small></p>
+
+        <p><small>お会計の際、このクーポンを提示してください。クーポンの併用不可。</small></p>
+    </div>
+</div>

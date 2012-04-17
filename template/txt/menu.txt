@@ -1,0 +1,58 @@
+===== menu-index
+<div class="bricks">
+    {{types}}
+        <div class="brick" data-result-id="{{id}}" data-result-title="{{title}}">
+            <img src="{{image}}" width="100%"/>
+            <div class="label">
+                {{title}}
+            </div>
+        </div>
+        {{if #|odd}}
+            <br>
+        {{/if}}
+    {{/types}}
+</div>
+
+===== menu-results
+{{device|equals>tablet|choose>135>100|set>width}}
+
+<ul class="results">
+    {{items}}
+        <li data-result-id="{{id}}">
+            <div class="thumbnail">
+                <img src="{{image|transcode>`width`}}" class="framed" width="{{width}}" alt=""/>
+            </div>
+            <div class="content">
+                <h2>{{title}}</h2>
+
+                <p>{{description}}</p>
+
+                {{if note}}
+                    <p><small>{{note}}</small></p>
+                {{/if}}
+
+                <div class="btn save" data-result-id="{{id}}">
+                    {{if favorite}}
+                        お気に入りから外す
+                    {{else}}
+                        お気に入りに追加
+                    {{/if}}
+                </div>
+            </div>
+        </li>
+    {{/items}}
+</ul>
+
+===== menu-detail
+{{device|equals>tablet|choose>400>250|set>width}}
+
+<article>
+    <h1>{{title}}</h1>
+    <div class="article-image">
+        <img src="{{image|transcode>`width`}}" width="{{width}}" class="framed"/>
+    </div>
+    <p>{{description}}</p>
+    {{if note}}
+        <p><small>{{note}}</small></p>
+    {{/if}}
+</article>

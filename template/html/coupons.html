@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Coupons</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="bc-manifest" content="../manifest.json" />
+
+<!-- styles -->
+<link rel="stylesheet" type="text/css" href="../css/theme-1.8.css" />
+<link rel="stylesheet" type="text/css" href="../css/app.css" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Gloria+Hallelujah" />
+
+<!-- scripts -->
+<script src="../js/lib/brightcove-app-cloud-1.8.js"></script>
+<script src="../js/lib/markup.js"></script>
+<script src="../js/lib/scrollworks.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/view/View.js"></script>
+<script src="../js/view/CouponView.js"></script>
+
+<script>
+var view;
+
+$(bc).bind("viewfocus", function (evt) {
+    if (!view) {
+        view = new CouponView();
+        view.init();
+    }
+});
+</script>
+
+</head>
+
+<body>
+
+<header id="banner">
+    ...
+</header>
+
+<div class="deck" id="deck" data-manual="back">
+    <div class="card" id="index-card">
+        <div class="bricks">
+            <div class="brick" id="scan-coupon">
+                <img src="../img/scan.jpg" width="100%" alt="Scan Coupon" />
+                <div class="label">
+                    クーポンをスキャンする
+                </div>
+            </div>
+
+            <div class="brick" id="my-coupons">
+                <img src="../img/qr-code.png" width="100%" alt="My Coupons" />
+                <div class="label">
+                    マイ　クーポン
+                </div>
+            </div>
+        </div>
+
+        <div id="directions" style="color:white; text-align: center; padding:15px 30px">
+            
+        </div>
+    </div>
+
+    <div class="card list" id="results-card">
+        <div class="scrollbox" id="results-scrollbox">
+            <!-- template -->
+        </div>
+    </div>
+
+    <div class="card detail" id="detail-card">
+        <div class="scrollbox" id="detail-scrollbox">
+            <!-- template -->
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

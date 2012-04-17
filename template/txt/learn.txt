@@ -1,0 +1,106 @@
+===== brightcove-results
+{{device|equals>tablet|choose>120>100|set>width}}
+
+{{items}}
+    {{if #|size|more>1}}
+        <h2 class="results">
+            {{name}}
+        </h2>
+    {{/if}}
+    <ul class="results" data-playlist-idx="{{#}}">
+        {{videos}}
+            <li data-result-type="brightcove" data-result-id="{{id}}">
+                <div class="thumbnail">
+                    <img src="{{thumbnailURL}}" class="framed" width="{{width}}"/>
+                </div>
+                <div class="content">
+                    <h2>{{name}}</h2>
+
+                    {{if longDescription}}
+                        <p>{{longDescription|tease>25}}</p>
+                    {{else}}
+                        <p>{{shortDescription}}</p>
+                    {{/if}}
+
+                    <p><small>{{length|playtime>1000}}</small></p>
+                </div>
+            </li>
+        {{/videos}}
+    </ul>
+{{/items}}
+
+===== youtube-results
+<ul class="results">
+    {{results}}
+        <li data-result-type="youtube" data-result-id="{{id}}">
+            <div class="thumbnail">
+                <img src="{{media_group_media_thumbnail.0.url}}" class="framed" width="100" height="75"/>
+            </div>
+            <div class="content">
+                <h2>{{title}}</h2>
+                <p>{{media_group_media_description|tease>25}}</p>
+                <p>
+                    <small>
+                        {{media_group_yt_duration_seconds|playtime}} |
+                        {{yt_statistics_viewCount|numformat}} views
+                    </small>
+                </p>
+            </div>
+        </li>
+    {{/results}}
+</ul>
+
+===== brightcove-detail
+{{device|equals>tablet|choose>400>270|set>width}}
+{{device|equals>tablet|choose>300>180|set>height}}
+
+<article>
+    <div style="text-align:right; padding: 8px">
+        <div class="btn" id="close-button">閉じる</div>
+    </div>
+
+    <div style="text-align:center; margin-bottom:15px">
+        <object id="myExperience{{id}}" class="BrightcoveExperience">
+            <param name="bgcolor" value="#FFFFFF"/>
+            <param name="width" value="{{width}}"/>
+            <param name="height" value="{{height}}"/>
+            <param name="playerID" value="{{playerId}}"/>
+            <param name="playerKey" value="{{playerKey}}"/>
+            <param name="isVid" value="true"/>
+            <param name="isUI" value="true"/>
+            <param name="dynamicStreaming" value="true"/>
+            <param name="@videoPlayer" value="{{id}}"/>
+            <param name="forceHTML" value="true"/>
+        </object>
+    </div>
+
+    <p>
+        <strong>{{name}}:</strong>
+        {{if longDescription}}
+            {{longDescription}}
+        {{else}}
+            {{shortDescription}}
+        {{/if}}
+        ({{length|playtime>1000}})
+    </p>
+</article>
+
+===== youtube-detail
+{{device|equals>tablet|choose>400>270|set>width}}
+{{device|equals>tablet|choose>300>180|set>height}}
+
+<article>
+    <div style="text-align:right; padding: 8px">
+        <div class="btn" id="close-button">閉じる</div>
+    </div>
+
+    <div style="text-align:center; margin-bottom:15px">
+        <iframe class="youtube-player" type="text/html" width="{{width}}" height="{{height}}" src="http://www.youtube.com/embed/{{media_group_yt_videoid}}?html5=1" frameborder="0"></iframe>
+    </div>
+
+    <p>
+        <strong>{{title}}:</strong>
+        {{media_group_media_description}}
+        ({{media_group_yt_duration_seconds|playtime}})
+    </p>
+</article>
